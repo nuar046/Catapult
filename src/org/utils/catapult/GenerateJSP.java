@@ -1,11 +1,4 @@
-package org.main.catapult;
-import org.apache.poi.ss.usermodel.Cell;
-import org.apache.poi.ss.usermodel.CellType;
-import org.apache.poi.ss.usermodel.Row;
-import org.apache.poi.ss.usermodel.Workbook;
-import org.apache.poi.ss.usermodel.WorkbookFactory;
-import org.apache.poi.xssf.usermodel.XSSFSheet;
-import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+package org.utils.catapult;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -14,13 +7,18 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Iterator;
 
+import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.CellType;
+import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.ss.usermodel.Workbook;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
-public class start {
+public class GenerateJSP implements ProcessCatapult {
 
     private static final String FILE_NAME = "C://sampleFile/catapult.xlsx";
-
-    public static void main(String[] args) {
-
+    
+	@Override
+	public void readFile() {
         try {
 
             FileInputStream excelFile = new FileInputStream(new File(FILE_NAME));
@@ -54,7 +52,11 @@ public class start {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        
+		
+	}
+
+	@Override
+	public void writeFile() {
         try {
             FileWriter myWriter = new FileWriter("filename.txt");
             myWriter.write("Files in Java might be tricky, but it is fun enough!");
@@ -64,6 +66,6 @@ public class start {
             System.out.println("An error occurred.");
             e.printStackTrace();
           }
+	}
 
-    }
-}
+	}
