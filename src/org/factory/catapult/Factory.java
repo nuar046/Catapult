@@ -13,6 +13,9 @@ public class Factory {
 	         return new GenerateJSP();
 	      }
 	     
+	      else if(shapeType.equalsIgnoreCase("SQL")){
+		         return new GenerateSQL();
+		  }
 	      
 	      return null;
 	   }

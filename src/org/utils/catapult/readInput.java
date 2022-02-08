@@ -2,6 +2,8 @@ package org.utils.catapult;
 
 public class readInput {
 	String InputType;
+	String ColumnType;
+	String Description;
 	boolean canEdit;
 	String label;
 	boolean mandatory;
@@ -17,6 +19,16 @@ public class readInput {
 	{
 		InputType = inputtype;
 	}
+	
+	public void setColumnType(String coltype)
+	{
+		ColumnType = coltype;
+	}
+	
+	public void setDescription(String desc)
+	{
+		Description = desc;
+	}	
 	
 	public void setCanEdit(Boolean canedit)
 	{
@@ -36,6 +48,16 @@ public class readInput {
 	public String getInputType()
 	{
 		return InputType;
+	}
+	
+	public String getColumnType()
+	{
+		return ColumnType;
+	}
+	
+	public String getDescription()
+	{
+		return Description;
 	}
 	
 	public Boolean getCanEdit()

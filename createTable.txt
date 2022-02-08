@@ -1,0 +1,8 @@
+CREATE TABLE KhairatKematian (
+ KhairatKematianID int,
+ ContractType Int,
+ ApplicantName varchar(255),
+ Consent Int,
+ AccountNumber Int,
+ Banks Int
+);
